@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: grey;
+    justify-content: center;
+    justify-items: center;
+}
+
+header nav ul {
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    padding-right: 20px;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    flex: 1 1 100%;
+    border: 1 px;
+    border-color: black;
+
+}
+
+header,
+main {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+nav {
+    background-color: #36454f;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-family: "Playwrite IN", serif;
+    font-weight: 100;
+}
+
+nav a:hover {
+    color: black;
+    /* change to your desired color */
+    border-bottom: 2px solid black;
+    /* add a border */
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+
+.active {
+    color: yellow;
+}
+
+.card img {
+    padding-left: 200px;
+    width: 600px;
+    /* adjust the width to your liking */
+    height: auto;
+    /* maintain the aspect ratio */
+    border-radius: 10px;
+    /* add a slight curve to the corners */
+    object-fit: cover;
+    /* ensure the image covers the entire area */
+}
+
+footer {
+    background-color: #333;
+    /* dark gray background */
+    color: #fff;
+    /* white text color */
+    padding: 2%;
+    /* add some padding */
+    text-align: center;
+    /* center the text */
+    clear: both;
+    /* clear any floats */
+    position: relative;
+    /* position relative to its parent */
+    bottom: 0;
+    /* position at the bottom of the page */
+    width: 100%;
+    /* full width */
+}
+
+footer p {
+    margin-bottom: 10px;
+    /* add some margin between paragraphs */
+}
+
+footer #lastModified {
+    font-size: 14px;
+    /* smaller font size for the last modified date */
+    color: #ccc;
+    /* lighter text color for the last modified date */
+}

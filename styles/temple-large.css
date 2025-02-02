@@ -1,0 +1,27 @@
+/* Media query for larger views */
+@media (min-width: 768px) {
+
+    /* Adjust layout for larger views */
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    figure {
+        margin-bottom: 0;
+    }
+
+    /* Adjust font sizes for larger views */
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav li {
+        margin-bottom: 0.5em;
+    }
+
+    figcaption {
+        font-size: 1em;
+    }
+}
