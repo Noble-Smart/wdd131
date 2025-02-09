@@ -4,39 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nigeria</title>
+    <title>Place</title>
     <link rel="stylesheet" href="/styles/place.css">
 </head>
 
 <body>
-    <header>
-        <h1>Nigeria</h1>
-    </header>
-    <main>
-        <section class="hero">
-            <picture>
-                <source srcset="images/nigeria-hero-400.webp" media="(max-width: 400px)">
-                <source srcset="images/nigeria-hero-800.webp" media="(max-width: 800px)">
-                <img src="images/nigeria-hero-1200.webp" alt="Nigeria Hero Image">
-            </picture>
-            <div class="cards-container">
-                <div class="card left-card move-left">
-                    <h2>Data</h2>
-                    <p>Some data about Nigeria...</p>
-                </div>
-                <div class="card right-card">
-                    <h2>Weather</h2>
-                    <p>Temperature: <span id="temperature">28°C</span></p>
-                    <p>Wind Speed: <span id="wind-speed">15 km/h</span></p>
-                    <p id="windchill">Wind Chill: <span id="windchill-value"></span></p>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <picture>
+            <source srcset="images/hero-mobile.webp" media="(max-width: 768px)">
+            <source srcset="images/hero-desktop.webp" media="(min-width: 769px)">
+            <img src="images/hero-desktop.webp" alt="Hero Image">
+        </picture>
+    </section>
+
+    <!-- Data Section -->
+    <section class="data">
+        <div class="data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Country:</strong> Madagascar</li>
+                <li><strong>Population:</strong> 27 million</li>
+                <li><strong>Capital:</strong> Antananarivo</li>
+                <li><strong>Language:</strong> Malagasy, French</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+        <div class="weather-card">
+            <h2>Weather</h2>
+            <p>Temperature: <span id="temperature">50°F</span></p>
+            <p>Wind Speed: <span id="wind-speed">10mph</span></p>
+            <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+            <svg class="weather-icon" aria-hidden="true" focusable="false">
+                <!-- Weather Icon SVG -->
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; <span id="year"></span> Nigeria Project</p>
-        <p>Last Modified: <span id="last-modified"></span></p>
+        <p>&copy; <span id="year"></span> | Last Modified: <span id="last-modified"></span></p>
     </footer>
+
     <script src="/scripts/place.js" defer></script>
 </body>
 

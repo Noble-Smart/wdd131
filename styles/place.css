@@ -1,77 +1,72 @@
+/* Global Styles */
+
 :root {
-    --primary-color: #008000;
-    /* Green */
-    --secondary-color: #ffffff;
-    /* White */
+    --primary-color: #3498db;
+    --secondary-color: #f1c40f;
+    --background-color: #f9f9f9;
+    --text-color: #333;
 }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
-header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 1em;
-    text-align: center;
-}
+
+/* Hero Section Styles */
+
 .hero {
     position: relative;
-    flex-grow: 1;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
+
 .hero picture {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
-.cards-container {
-    position: relative;
-    /* Change to relative */
-    top: 60%;
-    left: 50%;
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-}
-.card {
-    background-color: #f7f7f7;
-    padding: 2em;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex-basis: 40%;
-}
-.move-left {
-    position: absolute;
-    left: -80%;
-    top: -3%;
-}
-.right-card {
-    position: absolute;
-    right: 5%;
-    top: 100%;
-}
-footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 1em;
-    text-align: center;
-    margin-top: auto;
-}
-footer p {
-    margin-bottom: 0.5em;
-}
-/* Responsive layout */
-@media (max-width: 768px) {
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .card {
-        flex-basis: 80%;
-        margin-bottom: 2em;
-    }
+/* Weather Section Styles */
+
+.weather {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.weather h2 {
+    margin-top: 0;
+}
+
+.weather-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+/* Footer Section Styles */
+
+footer {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: #333;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    /* Mobile Styles */
+}
+
+@media (min-width: 769px) {
+    /* Desktop Styles */
 }
