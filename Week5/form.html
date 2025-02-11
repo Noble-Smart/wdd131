@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form action="review.html" method="get">
+            <label for="product">Product Name:</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+
+            <fieldset>
+                <legend>Overall Rating:</legend>
+                <div class="rating-container">
+                    <label><input type="radio" name="rating" value="1" required> ★</label>
+                    <label><input type="radio" name="rating" value="2"> ★★</label>
+                    <label><input type="radio" name="rating" value="3"> ★★★</label>
+                    <label><input type="radio" name="rating" value="4"> ★★★★</label>
+                    <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+                </div>
+            </fieldset>
+
+            <label for="installation-date">Date of Installation:</label>
+            <input type="date" id="installation-date" name="installation-date" required>
+
+            <fieldset>
+                <legend>Useful Features:</legend>
+                <div class="checkbox-container">
+                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                    <label><input type="checkbox" name="features" value="battery"> Long Battery Life</label>
+                    <label><input type="checkbox" name="features" value="lightweight"> Lightweight</label>
+                    <label><input type="checkbox" name="features" value="affordable"> Affordable</label>
+                    <label><input type="checkbox" name="features" value="customizable"> Customizable</label>
+                </div>
+            </fieldset>
+
+            <label for="review">Written Review (Optional):</label>
+            <textarea id="review" name="review"></textarea>
+
+            <label for="username">Your Name (Optional):</label>
+            <input type="text" id="username" name="username">
+
+            <input type="submit" value="Post Review" class="submit-btn">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Noble Onwuemeka, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
