@@ -16,6 +16,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
+
     /* Mobile: stack the nav and animate open/close using max-height */
     nav ul {
         display: block;
@@ -26,19 +27,26 @@ body {
         background-color: #fff;
         padding: 0 1em;
         margin: 0;
-        border: none; /* removed border for small screens */
-        box-shadow: none; /* ensure no shadow/reflective edge */
+        border: none;
+        /* removed border for small screens */
+        box-shadow: none;
+        /* ensure no shadow/reflective edge */
         z-index: 1000;
         overflow: hidden;
-        max-height: 0; /* collapsed by default */
+        max-height: 0;
+        /* collapsed by default */
         transition: max-height 300ms ease-in-out, padding 200ms ease-in-out;
     }
+
     color: var(--text-color);
+
     /* Show menu when nav has .open */
     nav.open ul {
-        max-height: 500px; /* large enough to show items; adjust if needed */
+        max-height: 500px;
+        /* large enough to show items; adjust if needed */
         padding: 1em;
     }
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -67,19 +75,22 @@ nav {
     position: relative;
 }
 
-    /* Menu link hover and focus styles (subtle, non-distracting) */
-    nav a {
-        display: block;
-        padding: 0.4em 0.6em;
-        border-radius: 6px;
-        transition: background-color 160ms ease, color 160ms ease;
-    }
+/* Menu link hover and focus styles (subtle, non-distracting) */
+nav a {
+    display: block;
+    padding: 0.4em 0.6em;
+    border-radius: 6px;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
 nav ul {
+
     nav a:hover,
     nav a:focus-visible {
         background-color: rgba(0, 0, 0, 0.05);
         outline: none;
     }
+
     list-style: none;
     padding: 0;
     margin: 0;
