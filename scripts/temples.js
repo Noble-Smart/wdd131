@@ -11,6 +11,27 @@ navToggle.addEventListener('click', () => {
     navToggle.setAttribute('aria-expanded', isOpen);
 });
 
+// Close menu when pressing Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' || e.key === 'Esc') {
+        if (nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.focus();
+        }
+    }
+});
+
+// Close menu when clicking outside of it
+document.addEventListener('click', (e) => {
+    if (!nav.classList.contains('open')) return;
+    // If the click target is not inside the nav, close
+    if (!nav.contains(e.target)) {
+        nav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+});
+
 // Get the current year and update the copyright notice
 const currentYear = new Date().getFullYear();
 document.getElementById('currentyear').textContent = currentYear;
