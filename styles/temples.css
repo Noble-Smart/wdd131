@@ -90,7 +90,8 @@ nav a {
         right: 0;
         background-color: #fff;
         padding: 1em;
-        border: 1px solid #ddd;
+        border: none; /* removed border for small screens */
+        box-shadow: none; /* ensure no shadow/reflective edge */
         z-index: 1000;
     }
 
@@ -98,7 +99,7 @@ nav a {
         width: 100%;
         margin: 0;
         padding: 0.5em;
-        border-bottom: 1px solid #ddd;
+        border: none; /* remove borders on mobile list items */
     }
 
     nav li:last-child {
