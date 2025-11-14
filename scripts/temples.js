@@ -1,13 +1,14 @@
-// Get the navigation toggle button
+// Get the navigation toggle button and nav container
 const navToggle = document.getElementById('nav-toggle');
-
-// Get the navigation menu
+const nav = document.querySelector('header nav');
 const navMenu = document.getElementById('nav-menu');
 
 // Add an event listener to the navigation toggle button
 navToggle.addEventListener('click', () => {
-    // Toggle the display of the navigation menu
-    navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
+    // Toggle a class on the nav to show/hide the menu (CSS handles visibility)
+    const isOpen = nav.classList.toggle('open');
+    // Update the accessible state
+    navToggle.setAttribute('aria-expanded', isOpen);
 });
 
 // Get the current year and update the copyright notice

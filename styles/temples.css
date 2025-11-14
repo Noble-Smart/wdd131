@@ -42,6 +42,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 nav ul {
@@ -78,12 +79,19 @@ nav a {
 @media (max-width: 768px) {
     nav ul {
         display: none;
+    }
+
+    /* Show menu when nav has .open */
+    nav.open ul {
+        display: block;
         position: absolute;
         top: 100%;
         left: 0;
+        right: 0;
         background-color: #fff;
         padding: 1em;
         border: 1px solid #ddd;
+        z-index: 1000;
     }
 
     nav li {

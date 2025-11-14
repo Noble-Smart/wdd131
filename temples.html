@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temples Album</title>
     <link rel="stylesheet" href="./styles/temples.css">
-    <link rel="stylesheet" href="./styles/temple-large.css">
+    <link rel="stylesheet" href="./styles/temples-large.css">
     <script src="./scripts/temples.js" defer></script>
 </head>
 
@@ -14,14 +14,14 @@
     <header>
         <h1>Temples Album</h1>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
                 <li><a href="#">New</a></li>
                 <li><a href="#">Large</a></li>
                 <li><a href="#">Small</a></li>
             </ul>
-            <button id="nav-toggle">Menu</button>
+            <button id="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
         </nav>
     </header>
     <main>
